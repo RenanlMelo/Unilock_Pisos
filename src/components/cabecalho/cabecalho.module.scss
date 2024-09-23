@@ -1,0 +1,67 @@
+/* - Header - */
+.header {
+  @apply grid grid-cols-4 justify-between items-center px-[3vw] py-[3vh] w-full z-[110] fixed;
+}
+
+.logo_div {
+  @apply flex justify-start items-center gap-x-3 cursor-pointer;
+}
+
+.logo {
+  @apply w-10 h-10;
+}
+
+.logo_title {
+  @apply text-xl text-white whitespace-nowrap;
+}
+
+.navbar {
+  @apply hidden xl:flex justify-center items-center gap-x-6 col-start-2 col-span-2;
+}
+
+.navItem {
+  @apply text-lg text-[var(--text-f)] 2xl:text-xl transition duration-100 after:block after:h-[2px] after:bg-[var(--text-f)] after:w-full after:scale-x-0 after:hover:scale-x-110 after:transition after:duration-300 after:origin-center after:translate-y-px;
+}
+
+.contactButton {
+  @apply hidden xl:block text-right text-xl font-bold text-[var(--text-dark2)] bg-[var(--primary)] hover:bg-[var(--primary-darken)] border-2 border-transparent hover:border-[var(--primary)] shadow-[1px_2px_5px_#00000060] hover:shadow-[1px_2px_10px_#00000080] w-fit place-self-end px-4 py-2 rounded-3xl duration-200;
+}
+
+.icon {
+  @apply absolute block xl:hidden right-[20px];
+}
+
+// Mobile
+.mobileDiv {
+  @apply w-[100vw] h-full absolute;
+
+  .mobileFilter {
+    @apply w-full h-[100vh] bg-black/50 absolute flex justify-end;
+
+    svg {
+      @apply w-8 absolute right-4 top-4;
+    }
+
+    .mobileNavbar {
+      @apply flex flex-col xl:hidden justify-self-end bg-black text-white/70 w-[70vw] h-[100vh] z-[110] pt-[4vh];
+
+      .mobileNavbarItem {
+        @apply flex xl:hidden text-[4.5vw] w-fit px-10 py-2 text-start tracking-widest uppercase underline-offset-4 underline decoration-2;
+
+        .loadingIcon {
+          @apply rounded-full border-[#ddd] border-[6px] border-l-[#505050] h-full aspect-square ml-2;
+          animation: spin 2s infinite linear;
+        }
+      }
+    }
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

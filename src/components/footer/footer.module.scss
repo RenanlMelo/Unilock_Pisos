@@ -1,0 +1,15 @@
+.footer {
+  @apply bg-[#101010] py-12 flex flex-col justify-center items-center;
+
+  div {
+    @apply w-[80%] h-px bg-white/30;
+  }
+
+  a {
+    @apply text-white/50 pt-4 duration-300;
+  }
+
+  a:hover {
+    @apply text-white/90;
+  }
+}
