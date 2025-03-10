@@ -40,7 +40,7 @@ The website consists of 4 simple pages:
 1. **Clone the Repository:**
    ```bash
    git clone https://github.com/RenanlMelo/Unilock_Pisos.git
-   cd unilock-pisos
+   cd Unilock_pisos
    ```
 
 2. **Install Dependencies:**
